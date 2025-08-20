@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: linear-gradient(180deg, #00aaff, #0088ff);
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+input[type="text"]
+{
+  font-size: 15px;
+  font-weight:bold;
+  padding: 15px;
+  margin:6px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: right;
+  width: 17vw;
+}
+.inner{
+    height:58vh;
+    width:18vw;
+    background-color:#f4cdcd;
+    border-radius:5px;
+}
+ .operator input{
+    font-weight:bold;
+    font-size:20px;
+    border: none;
+    font-family: Arial, sans-serif;
+    padding:20.5px;
+    border-radius:13px;
+    cursor: pointer;
+   background-color: yellow;
+    margin:3px;
+   border: none; 
+
+}
+.second input{
+    font-weight:bold;
+    font-size:20px;
+    border: none;
+    font-family: Arial, sans-serif;
+    padding:20.5px;
+    border-radius:13px;
+    cursor: pointer;
+        margin:3px;
+    background-color:#b3e0ff;
+}
+.third input{
+     font-weight:bold;
+    font-size:20px;
+    border: none;
+    font-family: Arial, sans-serif;
+    padding:20.5px;
+    border-radius:13px;
+    cursor: pointer;
+    margin:3px;
+    background-color:#b3e0ff;
+}
+.fourth input{
+     font-weight:bold;
+    font-size:20px;
+    border: none;
+    font-family: Arial, sans-serif;
+    padding:20.5px;
+    border-radius:13px;
+    margin:3px;
+    cursor: pointer;
+    border: 1px solid #b3a1e4;
+  background-color:#b3e0ff;
+
+}
+.equal input{
+     font-weight:bold;
+    font-size:20px;
+    border: none;
+    font-family: Arial, sans-serif;
+    padding:20.5px;
+    border-radius:13px;
+   border: none;
+   background: #056422;
+    color: white;
+     margin-top:5px,120;
+     cursor: pointer;
+     border: 1px solid #fff;
+
+    
+}
+
+
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius:8px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:17px;
+  font-weight:500;
+padding: 10px 25px;
+  text-align: center;
+ margin-top: 10px,160;
+  margin-right: 160px;
+  width:100px;
+}
+
+
+th {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+

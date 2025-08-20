@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculater.css">
+</head>
+<body>
+    <script src="calculater.js"></script>
+    <div class="inner">
+        <marquee behavior="slide" direction="left">This calculator is sucessfully working  </marquee>
+<table>
+    
+    <tr>
+        <th class="text"><input type="text" value="0" id="a"></th>
+    </tr>
+    <tr>
+        <th class="operator">
+          <input type="button" value="+"onclick="pick('+')">
+          <input type="button" value="-"onclick="pick('-')">
+          <input type="button" value="×"onclick="pick('*')">
+          <input type="button" value="÷"onclick="pick('/')">
+        </th>
+    </tr>
+        <tr >
+            <th class="second" >
+                <input type="button" value="7" onclick="pick(7)">
+                <input type="button"value="8"onclick="pick(8)">
+                <input type="button" value="9"onclick="pick(9)">
+                <input type="button" value="4"onclick="pick(4)">
+            </th>
+        </tr>
+        <tr class="third">
+            <th>
+                <input type="button" value="5"onclick="pick(5)">
+                <input type="button" value="6"onclick="pick(6)">
+                <input type="button" value="1"onclick="pick(1)">
+                <input type="button" value="2"onclick="pick(2)">
+                
+            </th>
+        </tr>
+        <tr >
+            <th class="fourth">
+                <input type="button" value="3"onclick="pick(3)">
+                <input type="button" value="0"onclick="pick(0)">
+                <input type="button" value="." onclick="pick('.')"style="font-weight:600;">
+                <input type="button" value="c" onclick="clr()" style="background-color: brown;">
+            </th>
+        </tr>
+       <tr>
+        <th>
+            <input type="button" class="button-37" value="=" onclick="solve()"></input>
+        </th>
+       </tr>
+
+        
+    </table>
+    </div>
+    
+</body>
+</html>
