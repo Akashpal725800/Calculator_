@@ -3,168 +3,126 @@
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
+
+body{
     background: linear-gradient(180deg, #00aaff, #0088ff);
-    height: 100vh;
-    width: 100wh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-input[type="text"]
-{
-  font-size: 15px;
+
+/* Display */
+input[type="text"]{
+  font-size: 18px;
   font-weight:bold;
   padding: 15px;
-  margin:6px;
+  margin:8px;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   text-align: right;
-  width: 17vw;
+  width: 90%;
 }
+
+/* Calculator Box */
 .inner{
-    height:58vh;
-    width:18vw;
+    width: 340px;
     background-color:#f4cdcd;
-    border-radius:5px;
+    border-radius:15px;
+    padding:15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.6s ease-in-out;
 }
-.operator input{
-    font-weight:bold;
-    font-size:20px;
-    border: none;
-    font-family: Arial, sans-serif;
-    padding:20.5px;
-    border-radius:13px;
-    cursor: pointer;
-    background-color: yellow;
-    margin:3px;
-}
-.second input{
-    font-weight:bold;
-    font-size:20px;
-    border: none;
-    font-family: Arial, sans-serif;
-    padding:20.5px;
-    border-radius:13px;
-    cursor: pointer;
-    margin:3px;
-    background-color:#b3e0ff;
-}
-.third input{
-    font-weight:bold;
-    font-size:20px;
-    border: none;
-    font-family: Arial, sans-serif;
-    padding:20.5px;
-    border-radius:13px;
-    cursor: pointer;
-    margin:3px;
-    background-color:#b3e0ff;
-}
-.fourth input{
-    font-weight:bold;
-    font-size:20px;
-    border: none;
-    font-family: Arial, sans-serif;
-    padding:20.5px;
-    border-radius:13px;
-    margin:3px;
-    cursor: pointer;
-    border: 1px solid #b3a1e4;
-    background-color:#b3e0ff;
-}
+
+/* Button Common Style */
+.operator input,
+.second input,
+.third input,
+.fourth input,
 .equal input{
     font-weight:bold;
     font-size:20px;
-    border: none;
     font-family: Arial, sans-serif;
-    padding:20.5px;
-    border-radius:13px;
+    padding:18px;
+    border-radius:12px;
+    cursor: pointer;
+    margin:5px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+/* Different Button Colors */
+.operator input{
+    background-color: yellow;
+}
+
+.second input,
+.third input,
+.fourth input{
+    background-color:#b3e0ff;
+}
+
+.equal input{
     background: #056422;
     color: white;
-    margin-top:5px,120;
-    cursor: pointer;
-    border: 1px solid #fff;
+    width: 92%;
+    display: block;
+    margin: 10px auto;
 }
 
-.button-37 {
-  background-color: #13aa52;
-  border: 1px solid #13aa52;
-  border-radius:8px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size:17px;
-  font-weight:500;
-  padding: 10px 25px;
-  text-align: center;
-  margin-top: 10px,160;
-  margin-right: 160px;
-  width:100px;
+/* Button Click Effect */
+.operator input:active,
+.second input:active,
+.third input:active,
+.fourth input:active,
+.equal input:active{
+    transform: scale(0.95);
 }
 
+/* Layout Fix */
 th {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-/* ================== Animation Added ================== */
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px){
 
-/* Fade + Slide Animation */
+    .inner{
+        width: 95%;
+        max-width: 360px;
+        padding:20px;
+    }
+
+    input[type="text"]{
+        width: 100%;
+        font-size:20px;
+    }
+
+    .operator input,
+    .second input,
+    .third input,
+    .fourth input{
+        width: 22%;
+        padding:20px 0;
+        font-size:18px;
+    }
+
+    .equal input{
+        width: 95%;
+    }
+}
+
+/* ===== Animation ===== */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Calculator Load Animation */
-.inner {
-  animation: fadeInUp 0.8s ease-in-out;
-}
-
-/* Button Click Effect */
-.operator input,
-.second input,
-.third input,
-.fourth input,
-.equal input {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.operator input:active,
-.second input:active,
-.third input:active,
-.fourth input:active,
-.equal input:active {
-  transform: scale(0.95);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* Equal Button Pulse Animation */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(5,100,34,0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(5,100,34,0); }
-  100% { box-shadow: 0 0 0 0 rgba(5,100,34,0); }
-}
-
-.equal input {
-  animation: pulse 2s infinite;
-}
-
-/* Mobile Smooth Animation */
-@media (max-width: 600px) {
-  .inner {
-    animation: fadeInUp 1s ease-in-out;
-  }
-}
-
