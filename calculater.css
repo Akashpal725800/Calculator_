@@ -11,8 +11,6 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
 input[type="text"]
 {
@@ -32,7 +30,7 @@ input[type="text"]
     background-color:#f4cdcd;
     border-radius:5px;
 }
- .operator input{
+.operator input{
     font-weight:bold;
     font-size:20px;
     border: none;
@@ -40,10 +38,8 @@ input[type="text"]
     padding:20.5px;
     border-radius:13px;
     cursor: pointer;
-   background-color: yellow;
+    background-color: yellow;
     margin:3px;
-   border: none; 
-
 }
 .second input{
     font-weight:bold;
@@ -53,11 +49,11 @@ input[type="text"]
     padding:20.5px;
     border-radius:13px;
     cursor: pointer;
-        margin:3px;
+    margin:3px;
     background-color:#b3e0ff;
 }
 .third input{
-     font-weight:bold;
+    font-weight:bold;
     font-size:20px;
     border: none;
     font-family: Arial, sans-serif;
@@ -68,7 +64,7 @@ input[type="text"]
     background-color:#b3e0ff;
 }
 .fourth input{
-     font-weight:bold;
+    font-weight:bold;
     font-size:20px;
     border: none;
     font-family: Arial, sans-serif;
@@ -77,26 +73,21 @@ input[type="text"]
     margin:3px;
     cursor: pointer;
     border: 1px solid #b3a1e4;
-  background-color:#b3e0ff;
-
+    background-color:#b3e0ff;
 }
 .equal input{
-     font-weight:bold;
+    font-weight:bold;
     font-size:20px;
     border: none;
     font-family: Arial, sans-serif;
     padding:20.5px;
     border-radius:13px;
-   border: none;
-   background: #056422;
+    background: #056422;
     color: white;
-     margin-top:5px,120;
-     cursor: pointer;
-     border: 1px solid #fff;
-
-    
+    margin-top:5px,120;
+    cursor: pointer;
+    border: 1px solid #fff;
 }
-
 
 .button-37 {
   background-color: #13aa52;
@@ -109,13 +100,12 @@ input[type="text"]
   font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size:17px;
   font-weight:500;
-padding: 10px 25px;
+  padding: 10px 25px;
   text-align: center;
- margin-top: 10px,160;
+  margin-top: 10px,160;
   margin-right: 160px;
   width:100px;
 }
-
 
 th {
   display: flex;
@@ -123,3 +113,57 @@ th {
   gap: 10px;
 }
 
+/* ================== Animation Added ================== */
+
+/* Fade + Slide Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Calculator Load Animation */
+.inner {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Button Click Effect */
+.operator input,
+.second input,
+.third input,
+.fourth input,
+.equal input {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.operator input:active,
+.second input:active,
+.third input:active,
+.fourth input:active,
+.equal input:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Equal Button Pulse Animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(5,100,34,0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(5,100,34,0); }
+  100% { box-shadow: 0 0 0 0 rgba(5,100,34,0); }
+}
+
+.equal input {
+  animation: pulse 2s infinite;
+}
+
+/* Mobile Smooth Animation */
+@media (max-width: 600px) {
+  .inner {
+    animation: fadeInUp 1s ease-in-out;
+  }
+}
